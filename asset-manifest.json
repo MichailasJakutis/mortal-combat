@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mortal-combat/static/css/main.64d7b475.css",
+    "main.js": "/mortal-combat/static/js/main.80972d2c.js",
+    "static/media/potion.png": "/mortal-combat/static/media/potion.0c215ae0d100bebb2963.png",
+    "index.html": "/mortal-combat/index.html",
+    "main.64d7b475.css.map": "/mortal-combat/static/css/main.64d7b475.css.map",
+    "main.80972d2c.js.map": "/mortal-combat/static/js/main.80972d2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64d7b475.css",
+    "static/js/main.80972d2c.js"
+  ]
+}

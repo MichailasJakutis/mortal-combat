@@ -11,6 +11,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.j-c{
+  justify-content: center;
+}
 .spc-a{
   justify-content: space-around;
 }
@@ -138,6 +141,31 @@
   background-color: rgb(202, 65, 65);
   box-shadow: 0 5px 5px rgba(1, 1, 1, 0.2);
   cursor: pointer;
+  margin: 2px;
+}
+.slot{
+  
+  margin: 2px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: rgb(202, 143, 33);
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.2);
+}
+.weapon{
+  margin: 2px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: rgb(202, 143, 33);
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.2);
+  cursor: pointer;
+}
+.weapon:hover{
+  background-color: rgb(236, 170, 47);
 }
 .potion:hover{
 background-color: rgb(248, 37, 90);
@@ -153,8 +181,8 @@ background-color: rgb(248, 37, 90);
 }
 @media (max-width: 510px) {
   .img{
-    height: 200px;
-    width: 150px;
+    height: 150px;
+    width: 100px;
   }
   .uiInfo{
     width: 100px;
@@ -162,4 +190,55 @@ background-color: rgb(248, 37, 90);
   .container{
     height: 270px;
   }
+}
+.sword{
+  background-image: url(./components/sword.png);
+  background-position: center;
+  background-size: cover;
+  margin: 2px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: rgb(202, 143, 33);
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.2);
+  cursor: pointer;
+}
+.sword:hover{
+  background-color: rgb(236, 170, 47);
+}
+.bow{
+  background-image: url(./components/bow.png);
+  background-position: center;
+  background-size: cover;
+  margin: 2px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: rgb(202, 143, 33);
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.2);
+  cursor: pointer;
+}
+.bow:hover{
+  background-color: rgb(236, 170, 47);
+}
+.staff{
+  background-image: url(./components/staff.png);
+  background-position: center;
+  background-size: cover;
+  margin: 2px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: rgb(202, 143, 33);
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.2);
+  cursor: pointer;
+}
+.staff:hover{
+  background-color: rgb(236, 170, 47);
 }

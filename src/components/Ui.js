@@ -1,5 +1,8 @@
 import { useState } from "react"
 import potion from "./potion.png"
+import sword from './sword.png'
+import bow from './bow.png'
+import staff from './staff.png'
 
 
 
@@ -10,15 +13,15 @@ import potion from "./potion.png"
 
 
 
-function Ui({ getG, getK, getL, heal }) {
+function Ui({ getG, getK, getL, heal, buySword, buyBow, buyStaff }) {
 
 
   const [getPopup, setPopup] = useState("shopWrapper ")
-  
+
 
   const pop = () => { setPopup(getPopup + "popup") }
   const close = () => { setPopup("shopWrapper ") }
-  
+
 
 
   return (
@@ -32,8 +35,24 @@ function Ui({ getG, getK, getL, heal }) {
 
       <div className={getPopup}>
         <h5>Shop</h5>
-        <div>
-          <img className="potion" onClick={heal} src={potion} alt='potion' />
+        <div className="d-flex j-c">
+          <div>
+            <img className="potion" onClick={heal} src={potion} alt='potion' />
+            <p style={{fontSize: "12px"}}>Cost: 50</p>
+          </div>
+          <div>
+            <img className="weapon" onClick={buySword} src={sword} alt='sword' />
+            <p style={{fontSize: "12px"}}>Cost: 100</p>
+          </div>
+          <div>
+            <img className="weapon" onClick={buyBow} src={bow} alt='bow' />
+            <p style={{fontSize: "12px"}}>Cost: 100</p>
+          </div>
+          <div>
+            <img className="weapon" onClick={buyStaff} src={staff} alt='staff' />
+            <p style={{fontSize: "12px"}}>Cost: 100</p>
+          </div>
+
         </div>
         <button className='popupBtn' onClick={close}>exit</button>
       </div>

@@ -1,18 +1,15 @@
+import { useState } from "react"
 
 
 
 
 
+function Player({ getHp, getXp, getHero, getSword, getBow, getStaff}) {
 
+  const [getPopup, setPopup] = useState("shopWrapper ")
+  const pop = () => { setPopup(getPopup + " popup") }
+  const close = () => { setPopup("shopWrapper ") }
 
-
-
-function Player({ getHp, getXp, getHero}) {
-
-
-
-
-console.log(getHp)
 
   return (
     <div className='container'>
@@ -27,7 +24,16 @@ console.log(getHp)
         <div className='expBar' style={{width: getXp+"%"}}   ></div>
     </div>
     <div>
-        <button className='btnInv'>Inventory</button>
+        <button className='btnInv' onClick={pop} >Inventory</button>
+    </div>
+    <div className={getPopup}>
+        <h5>Inventory</h5>
+        <div className="d-flex j-c">
+        <div className={getSword} ></div>
+        <div className={getBow}></div>
+        <div className={getStaff}></div>
+        </div>
+        <button className='popupBtn' onClick={close}>exit</button>
     </div>
     </div>
   )

@@ -4,6 +4,7 @@ import Enemy from './Enemy'
 import Ui from './Ui';
 import ssj from './ssj.png'
 
+
 const enemies = ['https://i.pinimg.com/originals/29/32/e1/2932e1668db1bbccc0e4d161f093efad.png',
   'https://i.pinimg.com/236x/88/d4/11/88d4119fd76ed8feb85c55e573959b4a--monster-art-fantasy-monster.jpg',
   'https://i.pinimg.com/236x/56/dc/47/56dc4781c421ca452d25024919ca046b.jpg',
@@ -29,10 +30,13 @@ function Attack() {
   let [getExp, setExp] = useState(0)
   let [getEnemy, setEnemy] = useState(enemies[1])
   let [getHero, setHero] = useState(hero[0])
+  let [getSword, setSword] = useState('slot'  )
+  let [getBow, setBow] = useState('slot'  )
+  let [getStaff, setStaff] = useState('slot'  )
 
   const rnd = num => Math.round(Math.random() * num)
 
-
+ 
   const hit = () => {
 
     setPlayerHp(getPlayerHp - rnd(5))
@@ -62,16 +66,33 @@ function Attack() {
     setPlayerHp(getPlayerHp = 100)
   }
  }
+ 
+ let buySword = () => {
+  if(getGold >= 100){
+    setGold(getGold - 100)
+    setSword( ' sword ')
+  }
+ }
+ let buyBow = () => {
+  if(getGold >= 100){
+    setGold(getGold - 100)
+    setBow( ' bow ')
+  }
+ }
+ let buyStaff = () => {
+  if(getGold >= 100){
+    setGold(getGold - 100)
+    setStaff( ' staff ')
+  }
+ }
 
-
-console.log(getEnemy)
   return (
 
     <div className='App'>
 
-      <Ui getG={getGold} getK={getKill} getL={getLvl} heal={heal} />
+      <Ui getG={getGold} getK={getKill} getL={getLvl} heal={heal} buySword={buySword} buyBow={buyBow} buyStaff={buyStaff} />
       <div className='d-flex spc-a al-c'>
-        <Player getHp={getPlayerHp} getXp={getExp} getHero={getHero} />
+        <Player getHp={getPlayerHp} getXp={getExp} getHero={getHero} getSword={getSword}  getBow={getBow}  getStaff={getStaff}/>
 
         <button className='btnAttack' onClick={hit} >Attack</button>
         <Enemy getHp={getEnemyHp} getEnemy={getEnemy} />

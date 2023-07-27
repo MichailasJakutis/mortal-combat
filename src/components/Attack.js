@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Player from './Player'
 import Enemy from './Enemy'
 import Ui from './Ui';
+import ssj from './ssj.png'
 
 const enemies = ['https://i.pinimg.com/originals/29/32/e1/2932e1668db1bbccc0e4d161f093efad.png',
   'https://i.pinimg.com/236x/88/d4/11/88d4119fd76ed8feb85c55e573959b4a--monster-art-fantasy-monster.jpg',
@@ -12,6 +13,10 @@ const enemies = ['https://i.pinimg.com/originals/29/32/e1/2932e1668db1bbccc0e4d1
   'https://wiki.supercombo.gg/images/b/b5/Chin98_stance.gif',
   'https://wiki.supercombo.gg/images/d/dd/Shermie98_stance.gif',]
 
+  const hero = [
+    'https://i.pinimg.com/736x/83/b8/8a/83b88afaf5557c053412ab699b6d3db7.jpg',
+    ssj,
+  ]
 
 function Attack() {
 
@@ -23,6 +28,7 @@ function Attack() {
   let [getLvl, setLvl] = useState(0)
   let [getExp, setExp] = useState(0)
   let [getEnemy, setEnemy] = useState(enemies[1])
+  let [getHero, setHero] = useState(hero[0])
 
   const rnd = num => Math.round(Math.random() * num)
 
@@ -43,7 +49,9 @@ function Attack() {
       setKill(getKill + 1)
       setEnemyHp(getEnemyHp = 100)
     }
-   
+    if(getPlayerHp <= 0){
+      setHero(hero[1])
+    }
 
   }
 
@@ -63,7 +71,7 @@ console.log(getEnemy)
 
       <Ui getG={getGold} getK={getKill} getL={getLvl} heal={heal} />
       <div className='d-flex spc-a al-c'>
-        <Player getHp={getPlayerHp} getXp={getExp} />
+        <Player getHp={getPlayerHp} getXp={getExp} getHero={getHero} />
 
         <button className='btnAttack' onClick={hit} >Attack</button>
         <Enemy getHp={getEnemyHp} getEnemy={getEnemy} />

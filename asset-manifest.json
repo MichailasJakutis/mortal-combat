@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/mortal-combat/static/css/main.64d7b475.css",
-    "main.js": "/mortal-combat/static/js/main.80972d2c.js",
+    "main.css": "/mortal-combat/static/css/main.370cb0c1.css",
+    "main.js": "/mortal-combat/static/js/main.66f365c9.js",
+    "static/media/ssj.png": "/mortal-combat/static/media/ssj.632a9a07307f717a66f3.png",
+    "static/media/bow.png": "/mortal-combat/static/media/bow.137ea88a198f9a3703c5.png",
     "static/media/potion.png": "/mortal-combat/static/media/potion.0c215ae0d100bebb2963.png",
+    "static/media/sword.png": "/mortal-combat/static/media/sword.e02a99c79370ce22b9ed.png",
+    "static/media/staff.png": "/mortal-combat/static/media/staff.804e31156128585ff8d0.png",
     "index.html": "/mortal-combat/index.html",
-    "main.64d7b475.css.map": "/mortal-combat/static/css/main.64d7b475.css.map",
-    "main.80972d2c.js.map": "/mortal-combat/static/js/main.80972d2c.js.map"
+    "main.370cb0c1.css.map": "/mortal-combat/static/css/main.370cb0c1.css.map",
+    "main.66f365c9.js.map": "/mortal-combat/static/js/main.66f365c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.64d7b475.css",
-    "static/js/main.80972d2c.js"
+    "static/css/main.370cb0c1.css",
+    "static/js/main.66f365c9.js"
   ]
 }
